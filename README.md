@@ -6,6 +6,7 @@ edit-node-guestfs
 A guestfs based edit-node.
 
 This is how it works:
+
 1. guestfish is used to extract the ext3fs.img from an existing LiveCD ISO
 2. guestfish is used to run a script inside the ext3fs.img (which is mounted inside a VM)
 3. Classic tools are used to rebuild the LiveCD ISO (TBD)
