@@ -1,6 +1,8 @@
 edit-node-guestfs
 =================
 
+> Note: This is a POC!
+
 A guestfs based edit-node.
 
 This is how it works:
@@ -16,3 +18,9 @@ Where
 * `isoname` is the path to an existing ISO.
 * `cmd` is a predefined cmd - a list of comands is printed when you don't provide a `<cmd>`
 * `cmdargs` (optional) Some commands take arguments (like `yum-install`)
+
+Example:
+
+    edit-iso.sh <isoname> info
+
+Will print some informations about the iso (system-release and ovirt rpms)
