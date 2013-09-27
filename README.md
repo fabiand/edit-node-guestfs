@@ -22,6 +22,12 @@ Where
 
 Example:
 
+    sudo setsebool -P virt_use_fusefs 1
     edit-iso.sh <isoname> info
 
 Will print some informations about the iso (system-release and ovirt rpms)
+
+## Notes
+* `setsebool -P virt_use_fusefs 1` needs to be enabled to allow guestfs to mount nested images
+* This might not work on RHEL because guestmount is used - which in turn uses FUSE
+* This tool does not yet require root rights, as the VM is spawned in a qemu session
